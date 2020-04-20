@@ -1,15 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: rgb(236, 77, 104);
-    height: 100vh;
-    width: 100%;
     font-family: 'Comic Neue', cursive;
 
 }
 
 #snake-container {
-    width: 50rem;
-    margin: 5vh 5vw;
-    justify-content: center;
+    background-color: rgb(236, 77, 104);
+    padding: 5vh 5vw;
+    height: 100vh;
+    width: 20rem;
+    /* margin: 5vh auto; */
+    /* justify-content: center; */
+}
+
+
+
+h1 {
+    text-align: center;
 }
 
 .start {
@@ -23,7 +34,7 @@ body {
 .score {
     margin-bottom: 1rem;
     font-weight: bold;
-    ;
+
 }
 
 .grid {
@@ -31,6 +42,7 @@ body {
     height: 200px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
     border-style: solid;
     background-color: rgb(96, 173, 33);
 }
@@ -38,6 +50,31 @@ body {
 .grid div {
     width: 20px;
     height: 20px;
+}
+
+#snake-direction-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    align-items: center;
+}
+
+#snake-direction-buttons button {
+    background-color: rgb(68, 199, 171);
+    border: 2px solid black;
+    color: black;
+    padding: 0.2rem 0.4rem;
+    width: 4rem;
+}
+
+.btn-up-down {
+    /* margin-left: 2.2rem; */
+    margin-bottom: 0.2rem;
+}
+
+.btn-left-right {
+    margin-bottom: 0.2rem;
 }
 
 .snake {

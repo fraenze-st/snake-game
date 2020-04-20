@@ -76,6 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    const btnRight = document.querySelector('.btn-right');
+    const btnLeft = document.querySelector('.btn-left');
+    const btnUp = document.querySelector('.btn-up');
+    const btnDown = document.querySelector('.btn-down');
 
 
     //assign functions to keycode
@@ -93,7 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.keyCode === 40) {
             direction = +width //down arrow
         }
+
     }
+
+    btnRight.addEventListener('click', function () {
+        direction = 1;
+    })
+    btnLeft.addEventListener('click', function () {
+        direction = -1;
+    })
+    btnUp.addEventListener('click', function () {
+        direction = -width;
+    })
+    btnDown.addEventListener('click', function () {
+        direction = +width;
+    })
 
     document.addEventListener('keyup', control);
     startBtn.addEventListener('click', startGame);
