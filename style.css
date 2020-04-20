@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(236, 77, 104);
+    height: 100vh;
+    width: 100%;
+    font-family: 'Comic Neue', cursive;
+
+}
+
+#snake-container {
+    width: 50rem;
+    margin: 5vh 5vw;
+    justify-content: center;
+}
+
+.start {
+    margin: 2rem 0;
+    background-color: rgb(68, 199, 171);
+    border: 2px solid black;
+    color: black;
+    padding: 0.2rem 0.4rem;
+}
+
+.score {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    ;
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+    background-color: rgb(96, 173, 33);
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.snake {
+    background-color: rgb(59, 59, 134);
+}
+
+.apple {
+    background-color: purple;
+
+    /* clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 38% 29%, 43% 1%); */
+    clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
+
+}
