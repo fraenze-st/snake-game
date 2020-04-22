@@ -81,7 +81,7 @@ h1 {
 
 #snake-direction-buttons button {
     background-color: rgb(95, 212, 187);
-    background: linear-gradient(0deg, rgb(98, 233, 204) 0%, rgb(95, 212, 187) 100%);
+    background: linear-gradient(0deg, rgb(81, 221, 191) 0%, rgb(95, 212, 187) 100%);
 
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
