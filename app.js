@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('span');
     const startBtn = document.querySelector('.start');
 
-    const width = 10;
+    const width = 11;
     let currentIndex = 0 //so first div in our grid
     let appleIndex = 0 //so first div in our grid
     let currentSnake = [2, 1, 0] //so the div in our grid being 2 (the HEAD), and 0 being the end (Tail) and 1s beeing the body
@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    //assign direction of snake to direction-buttons
     btnRight.addEventListener('click', function () {
         direction = 1;
     })

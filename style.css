@@ -10,9 +10,11 @@ body {
 
 #snake-container {
     background-color: rgb(236, 77, 104);
-    padding: 5vh 5vw;
+    padding: 4vh 5vw;
     height: 100vh;
     width: 20rem;
+    background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg);
+    background-size: cover;
     /* margin: 5vh auto; */
     /* justify-content: center; */
 }
@@ -21,30 +23,47 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 2.7rem;
+    color: white;
+    margin-bottom: 1rem;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.3rem;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: -2px 0 rgb(236, 77, 104), 0 2px rgb(236, 77, 104), 2px 0 rgb(236, 77, 104), 0 -2px rgb(236, 77, 104);
 }
 
 .start {
     margin: 2rem 0;
     background-color: rgb(68, 199, 171);
-    border: 2px solid black;
-    color: black;
+    background-color: rgb(255, 185, 197);
+    background: linear-gradient(90deg, rgb(241, 194, 201) 0%, rgb(250, 182, 194) 100%);
+    border: 2px solid rgb(68, 86, 119);
+    color: rgb(58, 73, 102);
+    /* font-weight: bold; */
     padding: 0.2rem 0.4rem;
 }
 
 .score {
     margin-bottom: 1rem;
     font-weight: bold;
-
+    font-size: 1.3rem;
+    color: white;
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+    text-shadow: -1px 0 rgb(118, 156, 153), 0 1px rgb(118, 156, 153), 1px 0 rgb(118, 156, 153), 0 -1px rgb(118, 156, 153);
 }
 
 .grid {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    border-style: solid;
-    background-color: rgb(96, 173, 33);
+    margin: 0 auto 2rem auto;
+    border: 0.3rem solid rgb(68, 86, 119);
+    background: rgb(114, 208, 231);
+    background: linear-gradient(54deg, rgb(114, 208, 231) 0%, rgb(38, 184, 189) 100%);
 }
 
 .grid div {
@@ -61,30 +80,36 @@ h1 {
 }
 
 #snake-direction-buttons button {
-    background-color: rgb(68, 199, 171);
-    border: 2px solid black;
-    color: black;
+    background-color: rgb(85, 223, 193);
+    border: 2px solid rgb(68, 86, 119);
+    color: rgb(58, 73, 102);
     padding: 0.2rem 0.4rem;
     width: 4rem;
 }
 
 .btn-up-down {
     /* margin-left: 2.2rem; */
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .btn-left-right {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn-left {
+    margin-right: 0.2rem;
+}
+
+.btn-right {
+    margin-left: 0.2rem;
 }
 
 .snake {
-    background-color: rgb(59, 59, 134);
+    background-color: rgb(2, 57, 109);
 }
 
 .apple {
     background-color: purple;
-
-    /* clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 38% 29%, 43% 1%); */
     clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
 
 }
