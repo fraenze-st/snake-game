@@ -39,7 +39,7 @@ h1 {
     margin: 2rem 0;
     background-color: rgb(68, 199, 171);
     background-color: rgb(255, 185, 197);
-    background: linear-gradient(90deg, rgb(241, 194, 201) 0%, rgb(250, 182, 194) 100%);
+    background: linear-gradient(54deg, rgb(255, 214, 220) 0%, rgb(250, 182, 194) 100%);
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     /* font-weight: bold; */
@@ -61,9 +61,9 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto 2rem auto;
-    border: 0.3rem solid rgb(68, 86, 119);
+    border: 0.25rem solid rgb(68, 86, 119);
     background: rgb(114, 208, 231);
-    background: linear-gradient(54deg, rgb(114, 208, 231) 0%, rgb(38, 184, 189) 100%);
+    background: linear-gradient(54deg, rgb(38, 184, 189) 0%, rgb(114, 208, 231) 100%);
 }
 
 .grid div {
@@ -80,7 +80,9 @@ h1 {
 }
 
 #snake-direction-buttons button {
-    background-color: rgb(85, 223, 193);
+    background-color: rgb(95, 212, 187);
+    background: linear-gradient(0deg, rgb(98, 233, 204) 0%, rgb(95, 212, 187) 100%);
+
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     padding: 0.2rem 0.4rem;
