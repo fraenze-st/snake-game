@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,6 @@
 
 body {
     font-family: 'Comic Neue', cursive;
-
 }
 
 #snake-container {
@@ -15,10 +16,7 @@ body {
     width: 20rem;
     background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg);
     background-size: cover;
-    /* margin: 5vh auto; */
-    /* justify-content: center; */
 }
-
 
 
 h1 {
@@ -26,12 +24,10 @@ h1 {
     font-size: 2.7rem;
     color: white;
     margin-bottom: 1rem;
-    /* font-family: 'Oswald', sans-serif; */
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-style: italic;
     letter-spacing: 0.3rem;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     text-shadow: -2px 0 rgb(236, 77, 104), 0 2px rgb(236, 77, 104), 2px 0 rgb(236, 77, 104), 0 -2px rgb(236, 77, 104);
 }
 
@@ -39,7 +35,8 @@ h1 {
     margin: 2rem 0;
     background-color: rgb(68, 199, 171);
     background-color: rgb(255, 185, 197);
-    background: linear-gradient(54deg, rgb(255, 214, 220) 0%, rgb(250, 182, 194) 100%);
+    background: -o-linear-gradient(36deg, rgb(251, 209, 215) 0%, rgb(250, 182, 194) 100%);
+    background: linear-gradient(54deg, rgb(251, 209, 215) 0%, rgb(250, 182, 194) 100%);
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     /* font-weight: bold; */
@@ -51,18 +48,21 @@ h1 {
     font-weight: bold;
     font-size: 1.3rem;
     color: white;
-    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
     text-shadow: -1px 0 rgb(118, 156, 153), 0 1px rgb(118, 156, 153), 1px 0 rgb(118, 156, 153), 0 -1px rgb(118, 156, 153);
 }
 
 .grid {
     width: 220px;
     height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0 auto 2rem auto;
     border: 0.25rem solid rgb(68, 86, 119);
     background: rgb(114, 208, 231);
+    background: -o-linear-gradient(36deg, rgb(38, 184, 189) 0%, rgb(114, 208, 231) 100%);
     background: linear-gradient(54deg, rgb(38, 184, 189) 0%, rgb(114, 208, 231) 100%);
 }
 
@@ -73,16 +73,23 @@ h1 {
 
 #snake-direction-buttons {
     margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    /* justify-content: left; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 #snake-direction-buttons button {
     background-color: rgb(95, 212, 187);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(81, 221, 191)), to(rgb(95, 212, 187)));
+    background: -o-linear-gradient(bottom, rgb(81, 221, 191) 0%, rgb(95, 212, 187) 100%);
     background: linear-gradient(0deg, rgb(81, 221, 191) 0%, rgb(95, 212, 187) 100%);
-
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     padding: 0.2rem 0.4rem;
@@ -90,7 +97,6 @@ h1 {
 }
 
 .btn-up-down {
-    /* margin-left: 2.2rem; */
     margin-bottom: 0.5rem;
 }
 
@@ -112,6 +118,7 @@ h1 {
 
 .apple {
     background-color: purple;
+    -webkit-clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
     clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
 
 }
