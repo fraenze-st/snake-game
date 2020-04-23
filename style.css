@@ -11,7 +11,7 @@ body {
 
 #snake-container {
     background-color: rgb(236, 77, 104);
-    padding: 4vh 5vw;
+    padding: 2vh 5vw;
     height: 100vh;
     width: 20rem;
     background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg);
@@ -32,7 +32,7 @@ h1 {
 }
 
 .start {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     background-color: rgb(68, 199, 171);
     background-color: rgb(255, 185, 197);
     background: -o-linear-gradient(36deg, rgb(251, 209, 215) 0%, rgb(250, 182, 194) 100%);
@@ -40,11 +40,12 @@ h1 {
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     /* font-weight: bold; */
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0.5rem;
+    letter-spacing: 0.05rem;
 }
 
 .score {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     font-size: 1.3rem;
     color: white;
