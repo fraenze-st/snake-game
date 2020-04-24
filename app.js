@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalTime = 0
     let interval = 0
 
+
     //to start, and restart the game
     function startGame() {
         currentSnake.forEach(index => squares[index].classList.remove('snake'));
@@ -50,12 +51,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const tail = currentSnake.pop() //removes last item of the array
         squares[tail].classList.remove('snake') //removes class of snake from tail
         currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head
+        squares[currentSnake[0]].classList.add("snakeHead")
+
+        squares[currentSnake[1]].classList.remove("snakeHead")
+
+        // snakes opens Mouth 1 square before eating apple
+        if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === -width) {
+            squares[currentSnake[0]].classList.add("upOpenMouth")
+        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === width) {
+            squares[currentSnake[0]].classList.add("downOpenMouth")
+        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === -1) {
+            squares[currentSnake[0]].classList.add("leftOpenMouth")
+        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === 1) {
+            squares[currentSnake[0]].classList.add("rightOpenMouth")
+        }
+
+        // remove open Mouth when head of snake eats apple
+        if (squares[currentSnake[0]].classList.contains('apple')) {
+            squares[currentSnake[1]].classList.remove("upOpenMouth")
+            squares[currentSnake[1]].classList.remove("downOpenMouth")
+            squares[currentSnake[1]].classList.remove("leftOpenMouth")
+            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+        }
+
 
         //deals with snake eating apple
         if (squares[currentSnake[0]].classList.contains('apple')) {
             squares[currentSnake[0]].classList.remove('apple')
+            squares[currentSnake[0]].classList.add('eatenApple') //digest apple
             squares[tail].classList.add('snake')
             currentSnake.push(tail)
+
             randomApple()
             score++
             scoreDisplay.textContent = score
@@ -63,6 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
             intervalTime = intervalTime * speed
             interval = setInterval(moveOutcomes, intervalTime)
         }
+
+        // remove digested apple
+        if (squares[currentSnake[currentSnake.length - 1]].classList.contains('eatenApple')) {
+            squares[currentSnake[currentSnake.length - 1]].classList.remove('eatenApple')
+        }
+
 
         squares[currentSnake[0]].classList.add('snake')
     }
@@ -104,12 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
     btnRight.addEventListener('click', function () {
         direction = 1;
     })
+
     btnLeft.addEventListener('click', function () {
         direction = -1;
     })
+
     btnUp.addEventListener('click', function () {
         direction = -width;
     })
+
     btnDown.addEventListener('click', function () {
         direction = +width;
     })
