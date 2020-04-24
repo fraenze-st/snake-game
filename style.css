@@ -129,6 +129,10 @@ h1 {
 
 }
 
+.eatenApple {
+    background-color: purple;
+}
+
 @media (max-width: 900px) {
     h1 {
         font-size: 3rem;
