@@ -7,27 +7,30 @@
 
 body {
     font-family: 'Comic Neue', cursive;
+    background-color: rgb(81, 212, 191);
+
 }
 
 #snake-container {
     background-color: rgb(236, 77, 104);
-    padding: 2vh 5vw;
+    padding: 4vh 10vw;
     height: 100vh;
-    width: 20rem;
-    background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg);
+    width: 60%;
+    background: url(/images/jordan-mcqueen-big.jpg);
     background-size: cover;
+    margin: 0 auto;
 }
 
 
 h1 {
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 3.5rem;
     color: white;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-style: italic;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.9rem;
     text-shadow: -2px 0 rgb(236, 77, 104), 0 2px rgb(236, 77, 104), 2px 0 rgb(236, 77, 104), 0 -2px rgb(236, 77, 104);
 }
 
@@ -42,12 +45,14 @@ h1 {
     /* font-weight: bold; */
     padding: 0.2rem 0.5rem;
     letter-spacing: 0.05rem;
+    font-size: 1.2rem;
+    height: 2.2rem;
 }
 
 .score {
     margin-bottom: 2rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: white;
     text-shadow: -1px 0 rgb(118, 156, 153), 0 1px rgb(118, 156, 153), 1px 0 rgb(118, 156, 153), 0 -1px rgb(118, 156, 153);
 }
@@ -122,4 +127,99 @@ h1 {
     -webkit-clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
     clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
 
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    #snake-container {
+        background-color: rgb(236, 77, 104);
+        padding: 4vh 3vw;
+        height: 100vh;
+        width: 100vw;
+        /* margin: 0 auto; */
+        margin: 0;
+    }
+
+    .start {
+        margin: 2rem 0 1rem 0;
+        border: 2px solid rgb(68, 86, 119);
+        padding: 0.2rem 0.5rem;
+        letter-spacing: 0.05rem;
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+
+    #snake-container {
+        background-color: rgb(236, 77, 104);
+        padding: 4vh 3vw;
+        height: 100vh;
+        width: 100vw;
+        /* background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg); */
+        background: url(/images/jordan-mcqueen-small.jpg);
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+
+    .start {
+        margin: 1rem 0 0.5rem 0;
+        border: 2px solid rgb(68, 86, 119);
+        /* font-weight: bold; */
+        letter-spacing: 0.05rem;
+        font-size: 0.8rem;
+        height: 1.7rem;
+        padding: 0.2rem 0.5rem;
+        letter-spacing: 0.05rem;
+    }
+
+
+    .score {
+        margin-bottom: 1.7rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        margin: 0 auto 2rem auto;
+        border: 0.2rem solid rgb(68, 86, 119);
+    }
+
+    #snake-direction-buttons {
+        margin-top: 0;
+
+    }
+
+    #snake-direction-buttons button {
+        border: 2px solid rgb(68, 86, 119);
+        color: rgb(58, 73, 102);
+        padding: 0.2rem 0.4rem;
+        width: 4rem;
+        font-size: 0.9rem;
+    }
+
+
+}
+
+@media (max-width: 370px) {
+    .score {
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        margin: 0 auto 1rem auto;
+        border: 0.2rem solid rgb(68, 86, 119);
+    }
 }
