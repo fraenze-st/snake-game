@@ -51,23 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const tail = currentSnake.pop() //removes last item of the array
         squares[tail].classList.remove('snake') //removes class of snake from tail
         currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head
-        squares[currentSnake[0]].classList.add("snakeHead")
+        // squares[currentSnake[0]].classList.add("snakeHead")
 
-        squares[currentSnake[1]].classList.remove("snakeHead")
+        // squares[currentSnake[1]].classList.remove("snakeHead")
 
-        // snakes opens Mouth 1 square before eating apple
-        if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === -width) {
+        // add open mouth and direction of open mouth
+        if (squares[currentSnake[0] + direction] && direction === -width) {
             squares[currentSnake[0]].classList.add("upOpenMouth")
-        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === width) {
+            squares[currentSnake[1]].classList.remove("upOpenMouth")
+            squares[currentSnake[1]].classList.remove("downOpenMouth")
+            squares[currentSnake[1]].classList.remove("leftOpenMouth")
+            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+        } else if (squares[currentSnake[0] + direction] && direction === width) {
             squares[currentSnake[0]].classList.add("downOpenMouth")
-        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === -1) {
+            squares[currentSnake[1]].classList.remove("upOpenMouth")
+            squares[currentSnake[1]].classList.remove("downOpenMouth")
+            squares[currentSnake[1]].classList.remove("leftOpenMouth")
+            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+        } else if (squares[currentSnake[0] + direction] && direction === -1) {
             squares[currentSnake[0]].classList.add("leftOpenMouth")
-        } else if (squares[currentSnake[0] + direction].classList.contains('apple') && direction === 1) {
+            squares[currentSnake[1]].classList.remove("upOpenMouth")
+            squares[currentSnake[1]].classList.remove("downOpenMouth")
+            squares[currentSnake[1]].classList.remove("leftOpenMouth")
+            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+        } else if (squares[currentSnake[0] + direction] && direction === 1) {
             squares[currentSnake[0]].classList.add("rightOpenMouth")
-        }
-
-        // remove open Mouth when head of snake eats apple
-        if (squares[currentSnake[0]].classList.contains('apple')) {
             squares[currentSnake[1]].classList.remove("upOpenMouth")
             squares[currentSnake[1]].classList.remove("downOpenMouth")
             squares[currentSnake[1]].classList.remove("leftOpenMouth")
