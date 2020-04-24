@@ -54,7 +54,7 @@ h1 {
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
-    text-shadow: -1px 0 rgb(118, 156, 153), 0 1px rgb(118, 156, 153), 1px 0 rgb(118, 156, 153), 0 -1px rgb(118, 156, 153);
+    text-shadow: -1px 0 rgb(105, 139, 137), 0 1px rgb(105, 139, 137), 1px 0 rgb(105, 139, 137), 0 -1px rgb(105, 139, 137);
 }
 
 .grid {
@@ -175,7 +175,7 @@ h1 {
 
 
     .start {
-        margin: 1rem 0 0.5rem 0;
+        margin: 1.5rem 0 0.5rem 0;
         border: 2px solid rgb(68, 86, 119);
         /* font-weight: bold; */
         letter-spacing: 0.05rem;
@@ -187,7 +187,7 @@ h1 {
 
 
     .score {
-        margin-bottom: 1.7rem;
+        margin-bottom: 2.5rem;
         font-weight: bold;
         font-size: 1.2rem;
     }
@@ -213,7 +213,7 @@ h1 {
 
 }
 
-@media (max-width: 370px) {
+@media (max-width: 359px) {
     .score {
         margin-bottom: 1.5rem;
         font-weight: bold;
