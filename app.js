@@ -51,42 +51,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const tail = currentSnake.pop() //removes last item of the array
         squares[tail].classList.remove('snake') //removes class of snake from tail
         currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head
-        // squares[currentSnake[0]].classList.add("snakeHead")
 
-        // squares[currentSnake[1]].classList.remove("snakeHead")
+        squares[currentSnake[0]].classList.add('snake')
 
         // add open mouth and direction of open mouth
         if (squares[currentSnake[0] + direction] && direction === -width) {
             squares[currentSnake[0]].classList.add("upOpenMouth")
-            squares[currentSnake[1]].classList.remove("upOpenMouth")
-            squares[currentSnake[1]].classList.remove("downOpenMouth")
-            squares[currentSnake[1]].classList.remove("leftOpenMouth")
-            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+
         } else if (squares[currentSnake[0] + direction] && direction === width) {
             squares[currentSnake[0]].classList.add("downOpenMouth")
-            squares[currentSnake[1]].classList.remove("upOpenMouth")
-            squares[currentSnake[1]].classList.remove("downOpenMouth")
-            squares[currentSnake[1]].classList.remove("leftOpenMouth")
-            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+
         } else if (squares[currentSnake[0] + direction] && direction === -1) {
             squares[currentSnake[0]].classList.add("leftOpenMouth")
-            squares[currentSnake[1]].classList.remove("upOpenMouth")
-            squares[currentSnake[1]].classList.remove("downOpenMouth")
-            squares[currentSnake[1]].classList.remove("leftOpenMouth")
-            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+
         } else if (squares[currentSnake[0] + direction] && direction === 1) {
             squares[currentSnake[0]].classList.add("rightOpenMouth")
+
+        }
+
+        if (squares[currentSnake[0] + direction]) {
+            squares[currentSnake[0]].classList.add("snakeHead")
+            squares[currentSnake[1]].classList.remove("snakeHead")
             squares[currentSnake[1]].classList.remove("upOpenMouth")
             squares[currentSnake[1]].classList.remove("downOpenMouth")
             squares[currentSnake[1]].classList.remove("leftOpenMouth")
             squares[currentSnake[1]].classList.remove("rightOpenMouth")
         }
 
-
         //deals with snake eating apple
         if (squares[currentSnake[0]].classList.contains('apple')) {
             squares[currentSnake[0]].classList.remove('apple')
-            squares[currentSnake[0]].classList.add('eatenApple') //digest apple
+            squares[currentSnake[1]].classList.add('eatenApple') //digest apple
             squares[tail].classList.add('snake')
             currentSnake.push(tail)
 
@@ -103,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[currentSnake[currentSnake.length - 1]].classList.remove('eatenApple')
         }
 
-
-        squares[currentSnake[0]].classList.add('snake')
     }
 
     //generate new apple once apple is eaten
@@ -115,11 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[appleIndex].classList.add('apple')
 
     }
-
-    const btnRight = document.querySelector('.btn-right');
-    const btnLeft = document.querySelector('.btn-left');
-    const btnUp = document.querySelector('.btn-up');
-    const btnDown = document.querySelector('.btn-down');
 
 
     //assign functions to keycode
@@ -139,6 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+
+    const btnRight = document.querySelector('.btn-right');
+    const btnLeft = document.querySelector('.btn-left');
+    const btnUp = document.querySelector('.btn-up');
+    const btnDown = document.querySelector('.btn-down');
 
     //assign direction of snake to direction-buttons
     btnRight.addEventListener('click', function () {
