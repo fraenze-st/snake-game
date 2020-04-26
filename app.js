@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //to start, and restart the game
     function startGame() {
-        currentSnake.forEach(index => squares[index].classList.remove('snake'));
+        currentSnake.forEach(index => squares[index].classList.remove('snake', 'eatenApple', 'upOpenMouth', 'downOpenMouth', 'leftOpenMouth', 'rightOpenMouth', 'snakeHead')); //remove snake, openMouths and eatenApple from last game
         squares[appleIndex].classList.remove('apple');
         clearInterval(interval);
         score = 0
@@ -78,13 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
         var i;
         for (i = 1; i < currentSnake.length; i++) {
             if (squares[currentSnake[0] + direction]) {
-                squares[currentSnake[i]].classList.remove("upOpenMouth")
-                squares[currentSnake[i]].classList.remove("downOpenMouth")
-                squares[currentSnake[i]].classList.remove("leftOpenMouth")
-                squares[currentSnake[i]].classList.remove("rightOpenMouth")
-                squares[currentSnake[i]].classList.remove("snakeHead")
+                squares[currentSnake[i]].classList.remove('upOpenMouth', 'downOpenMouth', 'leftOpenMouth', 'rightOpenMouth', 'snakeHead');
             }
         }
+
 
         //deals with snake eating apple
         if (squares[currentSnake[0]].classList.contains('apple')) {
