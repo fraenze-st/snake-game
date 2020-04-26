@@ -69,13 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
+        // adds coloured snakeHead
         if (squares[currentSnake[0] + direction]) {
             squares[currentSnake[0]].classList.add("snakeHead")
-            squares[currentSnake[1]].classList.remove("snakeHead")
-            squares[currentSnake[1]].classList.remove("upOpenMouth")
-            squares[currentSnake[1]].classList.remove("downOpenMouth")
-            squares[currentSnake[1]].classList.remove("leftOpenMouth")
-            squares[currentSnake[1]].classList.remove("rightOpenMouth")
+        }
+
+        //remove open mouth and snake head  of snake body, except head
+        var i;
+        for (i = 1; i < currentSnake.length; i++) {
+            if (squares[currentSnake[0] + direction]) {
+                squares[currentSnake[i]].classList.remove("upOpenMouth")
+                squares[currentSnake[i]].classList.remove("downOpenMouth")
+                squares[currentSnake[i]].classList.remove("leftOpenMouth")
+                squares[currentSnake[i]].classList.remove("rightOpenMouth")
+                squares[currentSnake[i]].classList.remove("snakeHead")
+            }
         }
 
         //deals with snake eating apple
