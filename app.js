@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSnake = [2, 1, 0]
         currentIndex = 0
         currentSnake.forEach(index => squares[index].classList.add('snake'))
+        squares[currentSnake[0]].classList.add("rightOpenMouth", 'snakeHead')
         interval = setInterval(moveOutcomes, intervalTime)
     }
 
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (squares[currentSnake[0] + direction]) {
             squares[currentSnake[0]].classList.add("snakeHead")
         }
+
 
         //removes open mouth and snake head  of snake body, except head
         var i;
