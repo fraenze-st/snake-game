@@ -12,13 +12,15 @@ body {
 }
 
 #snake-container {
-    background-color: rgb(236, 77, 104);
+    /* background-color: rgb(231, 148, 162); */
     padding: 4vh 10vw;
     height: 100vh;
     width: 60%;
     /* Photo by Jordan McQueen on Unsplash */
     background: url(/images/jordan-mcqueen-big4.jpg);
     background-size: cover;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
     margin: 0 auto;
 }
 
@@ -100,7 +102,8 @@ h1 {
     border: 2px solid rgb(68, 86, 119);
     color: rgb(58, 73, 102);
     padding: 0.2rem 0.4rem;
-    width: 4rem;
+    font-size: 1.1rem;
+    width: 4.5rem;
 }
 
 .btn-up-down {
@@ -130,23 +133,25 @@ h1 {
 }
 
 .apple {
-    background-color: purple;
+    background-color: rgb(214, 35, 35);
+    background: linear-gradient(54deg, rgb(23, 129, 9) 35%, rgb(214, 35, 35) 60%);
+    background: -o-linear-gradient(36deg, rgb(23, 129, 9) 35%, rgb(214, 35, 35) 60%);
     -webkit-clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
     clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
 
 }
 
 .eatenApple {
-    background-color: rgb(102, 3, 102);
+    background-color: rgb(190, 7, 7);
+    background: linear-gradient(54deg, rgb(2, 98, 47) 40%, rgb(184, 5, 124) 50%);
+
 }
 
 .upOpenMouth {
-    /* clip-path: polygon(49% 62%, 99% 23%, 100% 100%, 48% 100%, 0 100%, 0 26%); */
     clip-path: polygon(51% 54%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
 .downOpenMouth {
-    /* clip-path: polygon(50% 0%, 100% 0, 100% 84%, 51% 40%, 0 85%, 0 1%); */
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 51% 45%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
@@ -156,7 +161,6 @@ h1 {
 }
 
 .rightOpenMouth {
-    /* clip-path: polygon(0 0, 79% 0, 46% 49%, 77% 100%, 0 100%); */
     clip-path: polygon(50% 0%, 86% 16%, 49% 51%, 94% 75%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 
 }
@@ -172,8 +176,9 @@ h1 {
         padding: 4vh 3vw;
         height: 100vh;
         width: 100vw;
-        /* margin: 0 auto; */
         margin: 0;
+        border-left: none;
+        border-right: none;
     }
 
     .start {
@@ -190,6 +195,11 @@ h1 {
         height: 220px;
         margin: 4rem auto 2rem auto;
 
+    }
+
+    #snake-direction-buttons button {
+        font-size: 1rem;
+        width: 4.1rem;
     }
 
 }
