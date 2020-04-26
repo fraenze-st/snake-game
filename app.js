@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         squares[currentSnake[0]].classList.add('snake')
 
-        // add open mouth and direction of open mouth
+        // adds open mouth and direction of open mouth
         if (squares[currentSnake[0] + direction] && direction === -width) {
             squares[currentSnake[0]].classList.add("upOpenMouth")
 
@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        // adds coloured snakeHead
+        // adds snakeHead with different styling in css
         if (squares[currentSnake[0] + direction]) {
             squares[currentSnake[0]].classList.add("snakeHead")
         }
 
-        //remove open mouth and snake head  of snake body, except head
+        //removes open mouth and snake head  of snake body, except head
         var i;
         for (i = 1; i < currentSnake.length; i++) {
             if (squares[currentSnake[0] + direction]) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //deals with snake eating apple
         if (squares[currentSnake[0]].classList.contains('apple')) {
             squares[currentSnake[0]].classList.remove('apple')
-            squares[currentSnake[1]].classList.add('eatenApple') //digest apple
+            squares[currentSnake[1]].classList.add('eatenApple') //digests apple
             squares[tail].classList.add('snake')
             currentSnake.push(tail)
 

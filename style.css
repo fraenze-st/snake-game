@@ -16,6 +16,7 @@ body {
     padding: 4vh 10vw;
     height: 100vh;
     width: 60%;
+    /* Photo by Jordan McQueen on Unsplash */
     background: url(/images/jordan-mcqueen-big4.jpg);
     background-size: cover;
     margin: 0 auto;
@@ -201,7 +202,6 @@ h1 {
         padding: 4vh 3vw;
         height: 100vh;
         width: 100vw;
-        /* background: url(/images/jordan-mcqueen-u9tAl8WR3DI-unsplash3.jpg); */
         background: url(/images/jordan-mcqueen-small4.jpg);
         margin: 0;
     }
