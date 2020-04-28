@@ -1,3 +1,10 @@
+//append divs to .grid
+for (let i = 0; i <= 121; i++) {
+    var divElement = document.createElement("Div");
+    document.querySelector(".grid").appendChild(divElement);
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('span');
